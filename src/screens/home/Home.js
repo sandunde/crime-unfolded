@@ -14,10 +14,10 @@ const Home = () => {
       <div className="case-container">
         <div className="cases">
           <img src={Case01} style={{ width: 400 }} alt="Case 1" />
-          <h2>Chamidi Perera</h2>
+          <h2>Isabella Grace</h2>
           <p>
             The new dean of the history <br />
-            department, Chamidi Perera, is found <br />
+            department, Isabella Grace, is found <br />
             dead in his office.
           </p>
           <Button
@@ -34,7 +34,7 @@ const Home = () => {
         </div>
         <div className="cases">
           <img src={Case02} style={{ width: 400 }} alt="Case 2" />
-          <h2>Dinithi Perera</h2>
+          <h2>Sophia Elizabeth</h2>
           <p>
             A high school senior fell to her death <br />
             from a window on the school’s 6th
@@ -56,7 +56,7 @@ const Home = () => {
         </div>
         <div className="cases">
           <img src={Case03} style={{ width: 400 }} alt="Case 3" />
-          <h2>Muthuli Perera</h2>
+          <h2>Rose Martinez</h2>
           <p>
             Bride-to-be Harmony Ashcroft is <br />
             found dead the night of her <br />
