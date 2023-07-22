@@ -1,15 +1,16 @@
 import React from "react";
 import Navbar from "../src/components/menue/NavBar"
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Note the change from 'Switch' to 'Routes'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./screens/Home";
-import About from "./screens/About";
-import Cases from "./screens/Cases";
-import Contact from "./screens/Contact";
-import OurStory from "./screens/OurStory";
-import OurTeam from "./screens/OurTeam";
-import Support from "./screens/Support";
+import Home from "./screens/home/Home";
+import About from "./screens/about/About";
+import Cases from "./screens/cases/Cases";
+import Contact from "./screens/contact/Contact";
+import OurStory from "./screens/ourStory/OurStory";
+import OurTeam from "./screens/ourTeam/OurTeam";
+import Support from "./screens/support/Support";
+
 
 function App() {
   return (
