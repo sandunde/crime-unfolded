@@ -1,8 +1,34 @@
-# Ignore node_modules directory
-node_modules/
-
-# Ignore other unwanted files (Add more as needed)
-.DS_Store
+# Logs
+logs
 *.log
-*.tmp
-*.cache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules
+jspm_packages/
+
+# Distribution directories
+dist/
+
+# Typescript v1 declaration files
+typings/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
