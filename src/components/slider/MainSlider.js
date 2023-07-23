@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Vid from "../../videos/crime.mp4";
+import Vid from "../../videos/crime-2.mp4";
 import logo from "../../img/cf-01.png";
 import "./MainSlider.css";
 import Button from "@mui/material/Button";
