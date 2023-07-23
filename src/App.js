@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../src/components/menue/NavBar";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import Home from "./screens/home/Home";
 import About from "./screens/about/About";
 import Cases from "./screens/cases/Cases";
