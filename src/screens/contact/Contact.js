@@ -1,16 +1,9 @@
-import React from "react";
-import Header from "../../components/header/Header";
-import FormValidation from "../../components/form/FormValidation";
-import Subscribe from "../../components/subscribe/Subscribe";
+import React from 'react'
 
 const Contact = () => {
   return (
-    <div>
-      <Header text="CONTACT" />
-      <FormValidation />
-      <Subscribe />
-    </div>
-  );
-};
+    <div>Contact</div>
+  )
+}
 
-export default Contact;
+export default Contact
