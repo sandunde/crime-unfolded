@@ -20,7 +20,6 @@ function ContactForm() {
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
 
-
   const isEmailValid = (email) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
@@ -32,7 +31,7 @@ function ContactForm() {
       ...prevFormData,
       [name]: value,
     }));
-  
+
     if (!isEmailValid(value)) {
       setEmailErrorMessage("Email not in the correct format");
     } else {
@@ -118,9 +117,8 @@ function ContactForm() {
             name="name"
             className="input-field"
             value={formData.name}
-            onChange={handleEmailChange}
+            onChange={handleInputChange}
           />
-          {emailErrorMessage && <span style={{ color: "red" }}>{emailErrorMessage}</span>}
           <ValidationError prefix="Name" field="name" errors={state.errors} />
           <br></br>
           <label htmlFor="email" className="field-name">
@@ -133,8 +131,14 @@ function ContactForm() {
             name="email"
             className="input-field"
             value={formData.email}
-            onChange={handleInputChange}
+            onChange={handleEmailChange}
           />
+          {emailErrorMessage && (
+            <>
+              <br></br>
+              <span style={{ color: "red" }}>{emailErrorMessage}</span>
+            </>
+          )}
           <ValidationError prefix="Email" field="email" errors={state.errors} />
           <br></br>
           <label htmlFor="message" className="field-name">
