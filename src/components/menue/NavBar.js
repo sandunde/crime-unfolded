@@ -80,7 +80,7 @@ const NavBar = () => {
                     Home
                   </NavLink>
                 </li>
-                <li className="menu-item sub__menus__arrows">
+                {/* <li className="menu-item sub__menus__arrows">
                   <Link to="#">
                     Cases <FiChevronDown />
                   </Link>
@@ -104,13 +104,13 @@ const NavBar = () => {
                       </NavLink>
                     </li>
                   </ul>
-                </li>
+                </li> */}
                 <li
                   onClick={toggleSubmenu}
                   className="menu-item sub__menus__arrows"
                 >
                   <Link to="#">
-                    About <FiChevronDown />
+                    Cases <FiChevronDown />
                   </Link>
                   <ul className={boxClassSubMenu.join(" ")}>
                     <li>
@@ -119,7 +119,7 @@ const NavBar = () => {
                         activeClassName="is-active"
                         to={`/OurStory`}
                       >
-                        OurStory
+                        Silent Nightfall
                       </NavLink>
                     </li>
                     <li>
@@ -128,10 +128,19 @@ const NavBar = () => {
                         activeClassName="is-active"
                         to={`/OurTeam`}
                       >
-                        OurTeam
+                        Shadows of Deceit
                       </NavLink>
                     </li>
                   </ul>
+                </li>
+                <li className="menu-item ">
+                  <NavLink
+                    onClick={toggleClass}
+                    activeClassName="is-active"
+                    to={`/OurTeam`}
+                  >
+                    About
+                  </NavLink>
                 </li>
                 <li className="menu-item ">
                   <NavLink

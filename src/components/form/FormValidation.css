@@ -15,7 +15,7 @@
 }
 
 .num-box {
-    width           : 40vh;
+    width           : 42vh;
     height          : 6vh;
     background-color: rgb(54, 54, 54);
     border-radius   : 10px;
@@ -46,12 +46,12 @@
 }
 
 .text-box h3 {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .field-name {
     color    : #fff;
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 15px;
 }
 
@@ -72,7 +72,7 @@
     margin-top      : 5px;
     width           : 400px;
     max-width       : 500px;
-    height          : 30px;
+    height          : 20px;
     max-height      : 200px;
     background-color: #4e71a0;
     padding         : 10px;

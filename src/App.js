@@ -10,6 +10,7 @@ import OurStory from "./screens/ourStory/OurStory";
 import OurTeam from "./screens/ourTeam/OurTeam";
 import Support from "./screens/support/Support";
 import Footer from "./components/footer/Footer";
+import ScrollUpButton from "./components/scroll/ScrollUpButton";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/OurTeam" element={<OurTeam />} />
         <Route path="/Support" element={<Support />} />
       </Routes>
+      <ScrollUpButton />
       <Footer />
     </Router>
   );

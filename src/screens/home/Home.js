@@ -5,11 +5,18 @@ import Case01 from "../../img/cases/case-1.png";
 import Case02 from "../../img/cases/case-2.png";
 import Case03 from "../../img/cases/case-3.png";
 import Button from "@mui/material/Button";
+import Subscribe from "../../components/subscribe/Subscribe"
 
 const Home = () => {
   return (
     <div>
       <MainSlider />
+      <div className="home-container">
+        <p className="home-container-p">
+          In the shadows, secrets hide and mysteries await. Will you dare to
+          unravel the enigma of the night?
+        </p>
+      </div>
       <h1 className="home-heading">UNRAVEL MYSTERIES, SEAL FILES</h1>
       <div className="case-container">
         <div className="cases">
@@ -76,6 +83,7 @@ const Home = () => {
           </Button>
         </div>
       </div>
+      <Subscribe/>
     </div>
   );
 };

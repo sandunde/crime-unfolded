@@ -73,7 +73,7 @@ const Subscribe = () => {
                 marginTop: 20,
                 borderColor: isFormValid ? "#FFD700" : "#9E9E9E",
                 color: isFormValid ? "#FFD700" : "#9E9E9E",
-                height: 45,
+                height: 40,
                 width: 200,
               }}
               type="submit"
