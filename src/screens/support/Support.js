@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Header from "../../components/header/Header";
+import Subscribe from "../../components/subscribe/Subscribe";
 
 const Support = () => {
   return (
-    <div>Support</div>
-  )
-}
+    <div>
+      <Header text="SUPPORT" />
+      <Subscribe />
+    </div>
+  );
+};
 
-export default Support
+export default Support;

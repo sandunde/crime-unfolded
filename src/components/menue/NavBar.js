@@ -109,7 +109,7 @@ const NavBar = () => {
                   onClick={toggleSubmenu}
                   className="menu-item sub__menus__arrows"
                 >
-                  <Link to="#">
+                  <Link to={`/Cases`}>
                     Cases <FiChevronDown />
                   </Link>
                   <ul className={boxClassSubMenu.join(" ")}>
@@ -137,7 +137,7 @@ const NavBar = () => {
                   <NavLink
                     onClick={toggleClass}
                     activeClassName="is-active"
-                    to={`/OurTeam`}
+                    to={`/About`}
                   >
                     About
                   </NavLink>
