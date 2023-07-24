@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Case1.css";
-import CaseImg from "../../../img/case-header/case1.png";
+import "./Case2.css";
+import CaseImg from "../../../img/case-header/case2.png";
 import Button from "@mui/material/Button";
 import { BiMoney, BiSolidKey } from "react-icons/bi";
 import Case01 from "../../../img/cases/case-1.png";
@@ -8,7 +8,7 @@ import Case02 from "../../../img/cases/case-2.png";
 import Case03 from "../../../img/cases/case-3.png";
 import Subscribe from "../../../components/subscribe/Subscribe";
 
-const Case1 = () => {
+const Case2 = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
@@ -109,12 +109,7 @@ const Case1 = () => {
             &times;
           </span>
           <img
-            src={[
-              Case01,
-              Case02,
-              Case03,
-              Case01,
-            ][selectedImageIndex]}
+            src={[Case01, Case02, Case03, Case01][selectedImageIndex]}
             alt={`Image ${selectedImageIndex + 1}`}
             className="modal-content"
           />
@@ -125,4 +120,4 @@ const Case1 = () => {
   );
 };
 
-export default Case1;
+export default Case2;

@@ -35,8 +35,8 @@ const NavBar = () => {
       path: "/Cases",
       subCases: [
         { name: "Isabella Grace", path: "/Isabella" },
-        { name: "Sophia Elizabeth", path: "/OurTeam" },
-        { name: "Rose Martinez", path: "/OurT" },
+        { name: "Sophia Elizabeth", path: "/Sophia" },
+        { name: "Rose Martinez", path: "/Rose" },
       ],
     },
     { name: "About", path: "/About" },

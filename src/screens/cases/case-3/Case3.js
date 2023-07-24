@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Case1.css";
-import CaseImg from "../../../img/case-header/case1.png";
+import "./Case3.css";
+import CaseImg from "../../../img/case-header/case3.png";
 import Button from "@mui/material/Button";
 import { BiMoney, BiSolidKey } from "react-icons/bi";
 import Case01 from "../../../img/cases/case-1.png";
@@ -109,12 +109,7 @@ const Case1 = () => {
             &times;
           </span>
           <img
-            src={[
-              Case01,
-              Case02,
-              Case03,
-              Case01,
-            ][selectedImageIndex]}
+            src={[Case01, Case02, Case03, Case01][selectedImageIndex]}
             alt={`Image ${selectedImageIndex + 1}`}
             className="modal-content"
           />

@@ -11,17 +11,17 @@ import { useNavigate } from "react-router-dom";
 const Cases = () => {
   const navigate = useNavigate();
   const handleViewCase1 = () => {
-    navigate("/Cases");
+    navigate("/Isabella");
     window.scrollTo(0, 0);
   };
 
   const handleViewCase2 = () => {
-    navigate("/Cases");
+    navigate("/Sophia");
     window.scrollTo(0, 0);
   };
 
   const handleViewCase3 = () => {
-    navigate("/Cases");
+    navigate("/Rose");
     window.scrollTo(0, 0);
   };
   return (
