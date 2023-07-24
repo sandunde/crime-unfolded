@@ -1,3 +1,18 @@
+.home-container {
+    width           : 100%;
+    height          : 20vh;
+    background-color: #b22222;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+}
+
+.home-container-p {
+    color    : #fff;
+    font-size: 20px;
+    text-shadow    : 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .home-heading {
     margin-top     : 10vh;
     color          : #ffd700;
@@ -16,7 +31,7 @@
     flex-wrap      : wrap;
     gap            : 100px;
     margin-top     : 50px;
-    margin-bottom: 50px;
+    margin-bottom  : 50px;
 }
 
 .cases {
@@ -44,7 +59,7 @@
 
 .cases p {
     font-size: 16px;
-    color: #fff;
+    color    : #fff;
 }
 
 @media (max-width: 768px) {
@@ -52,6 +67,11 @@
         margin-top: 5vh;
         font-size : 24px;
         padding   : 10px;
+    }
+    .home-container-p {
+        color    : #fff;
+        font-size: 15px;
+        text-shadow    : 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 }
 

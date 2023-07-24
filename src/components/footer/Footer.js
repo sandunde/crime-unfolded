@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-menu">
           <div className="footer-logo">
-            <img src={Logo} style={{ width: "200px" }} alt="Company Logo" />
+            <img src={Logo} style={{ width: "150px" }} alt="Company Logo" />
           </div>
           <div className="site-map">
             <h3>Site Map</h3>

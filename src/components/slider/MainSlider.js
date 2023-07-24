@@ -15,7 +15,7 @@ const MainSlider = () => {
 
   return (
     <div className="slider-container">
-      <video src={Vid} autoPlay loop muted />
+      <video src={Vid} autoPlay loop muted playsInline/>
       <div className={`slider-content ${showElements ? "fadeIn" : ""}`}>
         {showElements && (
           <>
