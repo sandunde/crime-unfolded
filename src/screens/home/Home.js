@@ -4,10 +4,27 @@ import "./Home.css";
 import Case01 from "../../img/cases/case-1.png";
 import Case02 from "../../img/cases/case-2.png";
 import Case03 from "../../img/cases/case-3.png";
-import Button from "@mui/material/Button";
-import Subscribe from "../../components/subscribe/Subscribe"
+import Subscribe from "../../components/subscribe/Subscribe";
+import Case from "../../components/cases/Case";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handleViewCase1 = () => {
+    navigate("/Cases");
+    window.scrollTo(0, 0);
+  };
+
+  const handleViewCase2 = () => {
+    navigate("/Cases");
+    window.scrollTo(0, 0);
+  };
+
+  const handleViewCase3 = () => {
+    navigate("/Cases");
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div>
       <MainSlider />
@@ -19,71 +36,34 @@ const Home = () => {
       </div>
       <h1 className="home-heading">UNRAVEL MYSTERIES, SEAL FILES</h1>
       <div className="case-container">
-        <div className="cases">
-          <img src={Case01} style={{ width: 400 }} alt="Case 1" />
-          <h2>Isabella Grace</h2>
-          <p>
-            The new dean of the history <br />
-            department, Isabella Grace, is found <br />
-            dead in his office.
-          </p>
-          <Button
-            variant="outlined"
-            style={{
-              marginTop: 20,
-              borderColor: "#FFD700",
-              color: "#FFD700",
-              height: 50,
-            }}
-          >
-            View Case
-          </Button>
-        </div>
-        <div className="cases">
-          <img src={Case02} style={{ width: 400 }} alt="Case 2" />
-          <h2>Sophia Elizabeth</h2>
-          <p>
-            A high school senior fell to her death <br />
-            from a window on the school’s 6th
-            <br />
-            floor.
-          </p>
-          <Button
-            variant="outlined"
-            style={{
-              marginTop: 20,
-              color: "#d3d3d3",
-              borderColor: "#d3d3d3",
-              height: 50,
-            }}
-            disabled
-          >
-            Coming soon
-          </Button>
-        </div>
-        <div className="cases">
-          <img src={Case03} style={{ width: 400 }} alt="Case 3" />
-          <h2>Rose Martinez</h2>
-          <p>
-            Bride-to-be Harmony Ashcroft is <br />
-            found dead the night of her <br />
-            rehearsal dinner.
-          </p>
-          <Button
-            variant="outlined"
-            style={{
-              marginTop: 20,
-              color: "#d3d3d3",
-              borderColor: "#d3d3d3",
-              height: 50,
-            }}
-            disabled
-          >
-            Coming soon
-          </Button>
-        </div>
+        <Case
+          imageSrc={Case01}
+          title="Isabella Grace"
+          description="The new dean of the history department, Isabella Grace, is found dead in his office."
+          buttonLabel="View Case"
+          buttonColor="#FFD700"
+          onButtonClick={handleViewCase1}
+        />
+        <Case
+          imageSrc={Case02}
+          title="Sophia Elizabeth"
+          description="A high school senior fell to her death from a window on the school’s 6th floor."
+          buttonLabel="Coming soon"
+          buttonColor="#d3d3d3"
+          buttonDisabled
+          onButtonClick={handleViewCase2}
+        />
+        <Case
+          imageSrc={Case03}
+          title="Rose Martinez"
+          description="Bride-to-be Harmony Ashcroft is found dead the night of her rehearsal dinner."
+          buttonLabel="Coming soon"
+          buttonColor="#d3d3d3"
+          buttonDisabled
+          onButtonClick={handleViewCase3}
+        />
       </div>
-      <Subscribe/>
+      <Subscribe />
     </div>
   );
 };
