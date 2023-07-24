@@ -11,6 +11,7 @@ import OurTeam from "./screens/ourTeam/OurTeam";
 import Support from "./screens/support/Support";
 import Footer from "./components/footer/Footer";
 import ScrollUpButton from "./components/scroll/ScrollUpButton";
+import Error404 from "./screens/error404/Error404";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/OurStory" element={<OurStory />} />
         <Route path="/OurTeam" element={<OurTeam />} />
         <Route path="/Support" element={<Support />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
       <ScrollUpButton />
       <Footer />
