@@ -5,7 +5,7 @@ import Vid from "../../videos/crime.mov";
 const Header = ({text}) => {
   return (
 <div className="header-slider-container">
-      <video className="header-video" src={Vid} autoPlay loop muted />
+      <video className="header-video" src={Vid} autoPlay loop muted playsInline/>
       <div className="header-slider-content">
             <h1 className="header-quote">
               {text}
