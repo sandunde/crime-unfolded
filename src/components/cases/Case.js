@@ -17,7 +17,7 @@ const Case = ({ imageSrc, title, description, buttonLabel, buttonColor, buttonDi
           height: 50,
         }}
         disabled={buttonDisabled}
-        onClick={onButtonClick} // Call the callback function when the button is clicked
+        onClick={onButtonClick}
       >
         {buttonLabel}
       </Button>

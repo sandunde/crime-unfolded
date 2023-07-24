@@ -3,8 +3,15 @@ import Vid from "../../videos/crime-2.mp4";
 import logo from "../../img/cf-01.png";
 import "./MainSlider.css";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 const MainSlider = () => {
+  const navigate = useNavigate();
+
+  const handleRedirectToCases = () => {
+    navigate("/Cases");
+    window.scrollTo(0, 0);
+  };
   const [showElements, setShowElements] = useState(false);
 
   useEffect(() => {
@@ -37,6 +44,7 @@ const MainSlider = () => {
                   color: "#FFD700",
                   height: 50,
                 }}
+                onClick={handleRedirectToCases}
               >
                 Explore available cases
               </Button>
