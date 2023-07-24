@@ -22,14 +22,11 @@ const Footer = () => {
             <a href="/">
               <p>Home</p>
             </a>
-            <a href="/cases">
+            <a href="/Cases">
               <p>Cases</p>
             </a>
-            <a href="/OurStory">
-              <p>OurStory</p>
-            </a>
-            <a href="/OurTeam">
-              <p>OurTeam</p>
+            <a href="/About">
+              <p>About</p>
             </a>
             <a href="/Support">
               <p>Support</p>

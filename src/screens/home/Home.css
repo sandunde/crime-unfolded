@@ -34,34 +34,6 @@
     margin-bottom  : 50px;
 }
 
-.cases {
-    width     : 100%;
-    max-width : 300px;
-    padding   : 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    border    : 2px solid #b22222;
-}
-
-.cases img {
-    width        : 100%;
-    max-width    : 100%;
-    height       : auto;
-    margin-bottom: 20px;
-}
-
-.cases h2 {
-    color        : #fff;
-    font-size    : 24px;
-    font-weight  : 600;
-    margin-bottom: 10px;
-}
-
-.cases p {
-    font-size: 16px;
-    color    : #fff;
-}
-
 @media (max-width: 768px) {
     .home-heading {
         margin-top: 5vh;
