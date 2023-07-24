@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "crime-unfolded-latest"
-  }
+    "default": "crime-unfolded-latest",
+    "staging": "crime-unfolded-latest"
+  },
+  "targets": {},
+  "etags": {}
 }
