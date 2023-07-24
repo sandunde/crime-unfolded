@@ -81,7 +81,7 @@ function ContactForm() {
       <div className="text-container">
         <div className="num-box">
           <div className="img-circle">
-            <BsWhatsapp style={{ fontSize: 25 }} />
+            <BsWhatsapp style={{ fontSize: 20 }} />
           </div>
           <div className="text-box">
             <h3>+94765537625</h3>
@@ -89,7 +89,7 @@ function ContactForm() {
         </div>
         <div className="num-box">
           <div className="img-circle">
-            <BsFillEnvelopePaperFill style={{ fontSize: 25 }} />
+            <BsFillEnvelopePaperFill style={{ fontSize: 20 }} />
           </div>
           <div className="text-box">
             <h3>crimeunfolded@gmail.com</h3>
@@ -97,7 +97,7 @@ function ContactForm() {
         </div>
         <div className="num-box">
           <div className="img-circle">
-            <BsInstagram style={{ fontSize: 25 }} />
+            <BsInstagram style={{ fontSize: 20 }} />
           </div>
           <div className="text-box">
             <h3>_crime.unfolded</h3>
@@ -136,7 +136,7 @@ function ContactForm() {
           {emailErrorMessage && (
             <>
               <br></br>
-              <span style={{ color: "red" }}>{emailErrorMessage}</span>
+              <span style={{ color: "red", fontSize: 10 }}>{emailErrorMessage}</span>
             </>
           )}
           <ValidationError prefix="Email" field="email" errors={state.errors} />
@@ -165,7 +165,7 @@ function ContactForm() {
                 marginTop: 20,
                 borderColor: isFormValid ? "#FFD700" : "#9E9E9E",
                 color: isFormValid ? "#FFD700" : "#9E9E9E",
-                height: 45,
+                height: 40,
                 type: "submit",
                 width: 200,
               }}

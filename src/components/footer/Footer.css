@@ -19,7 +19,7 @@
     flex-wrap      : wrap;
     justify-content: flex-start;
     width          : 100%;
-    gap            : 150px;
+    gap            : 100px;
 }
 
 .footer-logo {
@@ -41,7 +41,7 @@
 h3 {
     margin-bottom: 10px;
     color        : #fff;
-    font-size    : 30px;
+    font-size    : 25px;
     font-weight  : 500;
 }
 
@@ -64,19 +64,19 @@ h3 {
     margin-bottom  : 10px;
     text-decoration: none;
     color          : rgb(160, 160, 160);
-    font-size      : 24px;
+    font-size      : 20px;
 }
 
 .social-icons a:hover {
     color    : #b22222;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .site-map p:hover,
 .our-cases p:hover,
 .support p:hover {
     color    : #b22222;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .footer-logo img {
@@ -97,8 +97,8 @@ h3 {
 }
 
 .center-container {
-    display    : grid;
-    place-items: center;
+    display       : grid;
+    place-items   : center;
     padding-bottom: 30px;
 }
 
@@ -108,7 +108,7 @@ h3 {
 
 .copy-rights h5 {
     margin   : 0;
-    font-size: 20px;
+    font-size: 15px;
     color    : rgb(255, 255, 255);
 }
 
@@ -136,33 +136,34 @@ h3 {
     .social-icons a {
         font-size: 20px;
     }
+
     .footer-logo img {
         opacity  : 0;
         animation: fadeInOut 5s ease-in-out infinite;
     }
-    
+
     @keyframes fadeInOut {
-    
+
         0%,
         100% {
             opacity: 0.1;
         }
-    
+
         50% {
             opacity: 1;
         }
     }
-    
+
     .center-container {
-        display    : grid;
-        place-items: center;
+        display       : grid;
+        place-items   : center;
         padding-bottom: 20px;
     }
-    
+
     .copy-rights {
         text-align: center;
     }
-    
+
     .copy-rights h5 {
         margin   : 0;
         font-size: 15px;
