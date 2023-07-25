@@ -49,7 +49,7 @@ const NavBar = () => {
       <div className="container">
         <div className="row">
           <div className="header__middle__logo">
-            <NavLink exact activeClassName="is-active" to="/">
+            <NavLink exact activeclassname="is-active" to="/">
               <img
                 src={logo}
                 alt="logo"
@@ -87,7 +87,7 @@ const NavBar = () => {
                   >
                     <NavLink
                       exact={!item.subCases}
-                      activeClassName="is-active"
+                      activeclassname="is-active"
                       onClick={toggleClass}
                       to={item.path}
                     >
@@ -100,7 +100,7 @@ const NavBar = () => {
                           <li key={subIndex}>
                             <NavLink
                               onClick={toggleClass}
-                              activeClassName="is-active"
+                              activeclassname="is-active"
                               to={subItem.path}
                             >
                               {subItem.name}
