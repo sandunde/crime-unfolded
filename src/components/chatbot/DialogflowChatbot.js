@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { TbMessageChatbot } from "react-icons/tb";
+import "./Chatbot.css"; // Import the CSS file
 
 const DialogflowChatbot = () => {
   useEffect(() => {
@@ -15,21 +15,14 @@ const DialogflowChatbot = () => {
   }, []);
 
   return (
-    <>
-      <style>
-        {`
-          df-messenger {
-            --df-messenger-button-titlebar-color: #3c3c3c;
-          }
-        `}
-      </style>
+    <div className="chatbot-container"> 
       <df-messenger
-  intent="WELCOME"
-  chat-title="Sherlock-AI"
-  agent-id="442ab90d-93de-41b5-b39f-23b8a3ab59fa"
-  language-code="en"
-></df-messenger>
-    </>
+        intent="WELCOME"
+        chat-title="Sherlock-AI"
+        agent-id="442ab90d-93de-41b5-b39f-23b8a3ab59fa"
+        language-code="en"
+      ></df-messenger>
+    </div>
   );
 };
 
