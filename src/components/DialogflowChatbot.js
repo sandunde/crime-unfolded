@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { TbMessageChatbot } from "react-icons/tb";
 
 const DialogflowChatbot = () => {
   useEffect(() => {
@@ -14,13 +15,21 @@ const DialogflowChatbot = () => {
   }, []);
 
   return (
-    <df-messenger
-      intent="WELCOME"
-      chat-title="Crime-Unfolded-ChatBot"
-      agent-id="442ab90d-93de-41b5-b39f-23b8a3ab59fa"
-      language-code="en"
-      st="true"
-    ></df-messenger>
+    <>
+      <style>
+        {`
+          df-messenger {
+            --df-messenger-button-titlebar-color: #3c3c3c;
+          }
+        `}
+      </style>
+      <df-messenger
+  intent="WELCOME"
+  chat-title="Sherlock-AI"
+  agent-id="442ab90d-93de-41b5-b39f-23b8a3ab59fa"
+  language-code="en"
+></df-messenger>
+    </>
   );
 };
 
