@@ -19,7 +19,7 @@ const DialogflowChatbot = () => {
       chat-title="Crime-Unfolded-ChatBot"
       agent-id="442ab90d-93de-41b5-b39f-23b8a3ab59fa"
       language-code="en"
-      st="true" // Add this attribute with a boolean value as a string.
+      st="true"
     ></df-messenger>
   );
 };
