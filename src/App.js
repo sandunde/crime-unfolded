@@ -13,7 +13,7 @@ import Error404 from "./screens/error404/Error404";
 import Case1 from "./screens/cases/case-1/Case1";
 import Case2 from "./screens/cases/case-2/Case2";
 import Case3 from "./screens/cases/case-3/Case3";
-import DialogflowChatbot from "./components/DialogflowChatbot";
+import DialogflowChatbot from "./components/chatbot/DialogflowChatbot";
 
 function App() {
   return (
