@@ -1,0 +1,67 @@
+.answer-main-container {
+    margin: 50px 0 50px 0;
+}
+
+.answer-container {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    gap            : 70px;
+}
+
+.answer-image-container {
+    border: 1px solid #b22222;
+}
+
+.answer-title-container h2 {
+    font-size : 50px;
+    text-align: center;
+    color     : #FFD700;
+}
+
+.answer-title-container h4 {
+    font-size : 40px;
+    text-align: center;
+    color     : #FFD700;
+}
+
+.task-container {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    gap            : 20px;
+}
+
+.answer-line {
+    width : 40%;
+    border: 0.2px solid rgb(255, 255, 255);
+    margin: 50px auto 50px auto;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .answer-title-container h2 {
+        font-size: 40px;
+    }
+
+    .answer-title-container h4 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .answer-container,
+    .task-container {
+        flex-direction: column;
+        gap           : 30px;
+    }
+
+    .answer-title-container h2 {
+        font-size: 30px;
+    }
+
+    .answer-title-container h4 {
+        font-size: 25px;
+    }
+}

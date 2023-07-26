@@ -55,7 +55,11 @@ const Subscribe = () => {
     setOpenSnackbar(false);
   };
 
-  const isFormValid = () => formData.email.trim() !== "";
+  const isFormValid = () => {
+    // Check if email is in a valid format using regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return formData.email.trim() !== "" && emailRegex.test(formData.email.trim());
+  };
 
   return (
     <div className="subscribe-container">
