@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Subscribe.css";
 import { useForm, ValidationError } from "@formspree/react";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
+import emailjs from "emailjs-com";
 
 const Subscribe = () => {
   const [state, handleSubmit] = useForm("myyqzbok");
@@ -20,27 +21,41 @@ const Subscribe = () => {
     }));
   };
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!isFormValid()) {
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        "service_e4lezei",
+        "template_ufe17ic",
+        form.current,
+        "BC3piJe04Qmk5Mity"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setOpenSnackbar(true);
+          setFormData({
+            email: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   const handleSnackbarClose = () => {
     setOpenSnackbar(false);
   };
 
-  const handleFormSubmit = async (e) => {
-    if (state.submitting || !isFormValid) {
-      return;
-    }
-
-    try {
-      await handleSubmit(e);
-      setOpenSnackbar(true);
-      setFormData({
-        email: "",
-      });
-    } catch (error) {
-      console.error("Form submission error:", error);
-    }
-  };
-
-  const isFormValid = formData.email.trim() !== "";
+  const isFormValid = () => formData.email.trim() !== "";
 
   return (
     <div className="subscribe-container">
@@ -52,7 +67,7 @@ const Subscribe = () => {
         CASES FROM US
       </h2>
       <div className="center-content">
-        <form onSubmit={handleFormSubmit}>
+        <form ref={form} onSubmit={sendEmail}>
           <label htmlFor="email" className="field-name-subscribe">
             Email Address
           </label>
@@ -71,13 +86,13 @@ const Subscribe = () => {
               variant="outlined"
               style={{
                 marginTop: 20,
-                borderColor: isFormValid ? "#FFD700" : "#9E9E9E",
-                color: isFormValid ? "#FFD700" : "#9E9E9E",
+                borderColor: isFormValid() ? "#FFD700" : "#9E9E9E",
+                color: isFormValid() ? "#FFD700" : "#9E9E9E",
                 height: 40,
                 width: 200,
               }}
               type="submit"
-              disabled={state.submitting || !isFormValid}
+              disabled={state.submitting || !isFormValid()}
             >
               Subscribe
             </Button>

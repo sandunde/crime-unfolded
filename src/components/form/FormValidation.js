@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import React, { useState, useRef } from "react";
 import {
   BsWhatsapp,
   BsFillEnvelopePaperFill,
@@ -9,9 +8,9 @@ import "./FormValidation.css";
 import Button from "@mui/material/Button";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
+import emailjs from "emailjs-com";
 
 function ContactForm() {
-  const [state, handleSubmit] = useForm("myyqzbjw");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,6 +18,37 @@ function ContactForm() {
   });
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = useState("");
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!isFormValid()) {
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        "service_e4lezei",
+        "template_n5cfmzx",
+        form.current,
+        "BC3piJe04Qmk5Mity"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setOpenSnackbar(true);
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   const isEmailValid = (email) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -51,26 +81,7 @@ function ContactForm() {
     setOpenSnackbar(false);
   };
 
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
-    if (state.submitting || !isFormValid) {
-      return;
-    }
-
-    try {
-      await handleSubmit(e);
-      setOpenSnackbar(true);
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Form submission error:", error);
-    }
-  };
-
-  const isFormValid =
+  const isFormValid = () =>
     formData.name.trim() !== "" &&
     formData.email.trim() !== "" &&
     isEmailValid(formData.email) &&
@@ -106,7 +117,7 @@ function ContactForm() {
       </div>
       <div className="vertical-line"></div>
       <div className="form-container">
-        <form onSubmit={handleFormSubmit}>
+        <form ref={form} onSubmit={sendEmail}>
           <label htmlFor="name" className="field-name">
             Name <span style={{ color: "red" }}>*</span>
           </label>
@@ -119,7 +130,6 @@ function ContactForm() {
             value={formData.name}
             onChange={handleInputChange}
           />
-          <ValidationError prefix="Name" field="name" errors={state.errors} />
           <br></br>
           <label htmlFor="email" className="field-name">
             Email Address <span style={{ color: "red" }}>*</span>
@@ -136,10 +146,11 @@ function ContactForm() {
           {emailErrorMessage && (
             <>
               <br></br>
-              <span style={{ color: "red", fontSize: 10 }}>{emailErrorMessage}</span>
+              <span style={{ color: "red", fontSize: 10 }}>
+                {emailErrorMessage}
+              </span>
             </>
           )}
-          <ValidationError prefix="Email" field="email" errors={state.errors} />
           <br></br>
           <label htmlFor="message" className="field-name">
             Comment <span style={{ color: "red" }}>*</span>
@@ -152,25 +163,20 @@ function ContactForm() {
             value={formData.message}
             onChange={handleInputChange}
           />
-          <ValidationError
-            prefix="Message"
-            field="message"
-            errors={state.errors}
-          />
           <br></br>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Button
               variant="outlined"
               style={{
                 marginTop: 20,
-                borderColor: isFormValid ? "#FFD700" : "#9E9E9E",
-                color: isFormValid ? "#FFD700" : "#9E9E9E",
+                borderColor: isFormValid() ? "#FFD700" : "#9E9E9E",
+                color: isFormValid() ? "#FFD700" : "#9E9E9E",
                 height: 40,
                 type: "submit",
                 width: 200,
               }}
               type="submit"
-              disabled={state.submitting || !isFormValid}
+              disabled={!isFormValid()}
             >
               Submit
             </Button>
