@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
 import "./NavBar.css";
 import logo from "../../img/cf-01.png";
@@ -40,6 +40,7 @@ const NavBar = () => {
       ],
     },
     { name: "About", path: "/About" },
+    { name: "Answers", path: "/Answers" },
     { name: "Support", path: "/support" },
     { name: "Contact", path: "/Contact" },
   ];
@@ -88,7 +89,7 @@ const NavBar = () => {
                     <NavLink
                       exact={!item.subCases}
                       activeclassname="is-active"
-                      onClick={toggleClass}
+                      onClick={item.subCases ? toggleSubmenu : toggleClass}
                       to={item.path}
                     >
                       {item.name}

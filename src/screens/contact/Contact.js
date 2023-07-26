@@ -8,7 +8,6 @@ const Contact = () => {
     <div>
       <Header text="CONTACT" />
       <FormValidation />
-      <Subscribe />
     </div>
   );
 };

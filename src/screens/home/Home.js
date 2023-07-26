@@ -4,7 +4,6 @@ import "./Home.css";
 import Case01 from "../../img/cases/case-1.png";
 import Case02 from "../../img/cases/case-2.png";
 import Case03 from "../../img/cases/case-3.png";
-import Subscribe from "../../components/subscribe/Subscribe";
 import Case from "../../components/cases/Case";
 import { useNavigate } from "react-router-dom";
 
@@ -63,7 +62,6 @@ const Home = () => {
           onButtonClick={handleViewCase3}
         />
       </div>
-      <Subscribe />
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../../components/header/Header";
-import Subscribe from "../../components/subscribe/Subscribe";
 import "./Cases.css";
 import Case from "../../components/cases/Case";
 import Case01 from "../../img/cases/case-1.png";
@@ -81,7 +80,6 @@ const Cases = () => {
           onButtonClick={handleViewCase3}
         />
       </div>
-      <Subscribe />
     </div>
   );
 };
