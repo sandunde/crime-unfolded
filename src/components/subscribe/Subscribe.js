@@ -56,7 +56,6 @@ const Subscribe = () => {
   };
 
   const isFormValid = () => {
-    // Check if email is in a valid format using regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return formData.email.trim() !== "" && emailRegex.test(formData.email.trim());
   };
