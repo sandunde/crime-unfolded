@@ -38,7 +38,7 @@ img {
 }
 
 .navBar .col-md-3 {
-  /* z-index: 7; */
+  z-index: 7;
 }
 
 ul.main-menu {
@@ -146,7 +146,7 @@ li {
   width: 227px;
   left: -17px;
   padding: 2px 0 0 0;
-  /* z-index: 1; */
+  z-index: 1000;
   box-shadow: 0 10px 12px rgb(22 33 39 / 25%);
 }
 
@@ -163,7 +163,7 @@ li {
 
   .sub__menus__arrows__full:hover .sub__menus {
     display: block;
-    /* z-index: 1000000; */
+    z-index: 1000000;
   }
 }
 
@@ -228,7 +228,7 @@ li {
     display: block !important;
     position: absolute;
     left: 0;
-    /* z-index: 10007; */
+    z-index: 10007;
     background-color: #d8f1ff;
     border-bottom: 3px solid #b22222;
     right: 0;
