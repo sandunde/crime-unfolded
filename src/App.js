@@ -17,6 +17,8 @@ import DialogflowChatbot from "./components/chatbot/DialogflowChatbot";
 import Answers from "./screens/answers/Answers";
 import Subscribe from "./components/subscribe/Subscribe";
 import Case1Task1 from "./screens/cases/case-1/task/Case1Task1";
+import Case1Task2 from "./screens/cases/case-1/task/Case1Task2";
+import Case1Task3 from "./screens/cases/case-1/task/Case1Task3";
 
 function App() {
   return (
@@ -33,10 +35,12 @@ function App() {
         <Route path="/Rose" element={<Case3 />} />
         <Route path="/Answers" element={<Answers />} />
         <Route path="/Isabella-Task1" element={<Case1Task1 />} />
+        <Route path="/Isabella-Task2" element={<Case1Task2 />} />
+        <Route path="/Isabella-Task3" element={<Case1Task3 />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <ScrollUpButton />
-      {/* <DialogflowChatbot/> */}
+      <DialogflowChatbot />
       <Subscribe />
       <Footer />
     </Router>

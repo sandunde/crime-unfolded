@@ -16,6 +16,8 @@ const Answers = () => {
           caseTitle="ISABELLA GRACE"
           caseId="CASE ID: 1987/R2938"
           task1={"/Isabella-Task1"}
+          task2={"/Isabella-Task2"}
+          task3={"/Isabella-Task3"}
         />
         <div className="answer-line" />
         <AnswerComponent
