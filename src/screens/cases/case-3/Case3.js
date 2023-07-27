@@ -6,6 +6,7 @@ import Case02 from "../../../img/cases/case-2.png";
 import Case03 from "../../../img/cases/case-3.png";
 import AnswerBtn from "../../../components/answer-btn/AnswerBtn";
 import PurchaseBtn from "../../../components/purchase-btn/PurchaseBtn";
+import TaskHeader from "../../../components/task-header/TaskHeader";
 
 const Case1 = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,16 +24,11 @@ const Case1 = () => {
 
   return (
     <div className="case-main-container">
-      <div className="case-file-container">
-        <img src={CaseImg} className="case-img" alt="Rose"/>
-        <div className="case-file-header">
-          <h1 className="case-file-header-text">WHO KILLED ROSE MARTINEZ?</h1>
-          <p className="case-file-header-text-p">
-            One twin murdered, the other abducted, and the lead detective is
-            missing while on the killer’s trail.
-          </p>
-        </div>
-      </div>
+      <TaskHeader
+        headerImage={CaseImg}
+        headerTitle="WHO KILLED ROSE MARTINEZ?"
+        headerDescription="One twin murdered, the other abducted, and the lead detective is missing while on the killer’s trail."
+      />
       <div className="btn-container">
         <PurchaseBtn />
         <AnswerBtn />
