@@ -6,6 +6,7 @@ import Case02 from "../../../img/cases/case-2.png";
 import Case03 from "../../../img/cases/case-3.png";
 import AnswerBtn from "../../../components/answer-btn/AnswerBtn";
 import PurchaseBtn from "../../../components/purchase-btn/PurchaseBtn";
+import TaskHeader from "../../../components/task-header/TaskHeader";
 
 const Case1 = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,16 +24,11 @@ const Case1 = () => {
 
   return (
     <div className="case-main-container">
-      <div className="case-file-container">
-        <img src={CaseImg} className="case-img" alt="Isabella"/>
-        <div className="case-file-header">
-          <h1 className="case-file-header-text">WHO KILLED ISABELLA GRACE?</h1>
-          <p className="case-file-header-text-p">
-            Bride-to-be Isabella Grace is found dead the night of her rehearsal
-            dinner.
-          </p>
-        </div>
-      </div>
+      <TaskHeader
+        headerImage={CaseImg}
+        headerTitle="WHO KILLED ISABELLA GRACE?"
+        headerDescription="Bride-to-be Isabella Grace is found dead the night of her rehearsal dinner."
+      />
       <div className="btn-container">
         <PurchaseBtn />
         <AnswerBtn />

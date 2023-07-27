@@ -15,6 +15,7 @@ const Answers = () => {
           imageSrc={Image1}
           caseTitle="ISABELLA GRACE"
           caseId="CASE ID: 1987/R2938"
+          task1={"/Isabella-Task1"}
         />
         <div className="answer-line" />
         <AnswerComponent
