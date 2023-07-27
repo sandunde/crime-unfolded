@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../src/components/menu/NavBar";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -19,10 +19,21 @@ import Subscribe from "./components/subscribe/Subscribe";
 import Case1Task1 from "./screens/cases/case-1/task/Case1Task1";
 import Case1Task2 from "./screens/cases/case-1/task/Case1Task2";
 import Case1Task3 from "./screens/cases/case-1/task/Case1Task3";
+import SplashScreen from "./components/splash-screen/SplashScreen";
 
 function App() {
-  return (
-    <Router>
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
+  return loading ? (
+    <SplashScreen />
+  ) : (
+    (<Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -43,7 +54,7 @@ function App() {
       <DialogflowChatbot />
       <Subscribe />
       <Footer />
-    </Router>
+    </Router>)
   );
 }
 
