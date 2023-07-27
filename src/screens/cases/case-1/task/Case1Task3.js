@@ -4,7 +4,7 @@ import TaskHeader from "../../../../components/task-header/TaskHeader";
 import CaseImg from "../../../../img/case-header/case1.png";
 import Question from "../../../../components/questions/Question";
 
-const Case1Task1 = () => {
+const Case1Task3 = () => {
   const questionSet1 = {
     mainQuestion: "Can You Prove Bones Is Innocent?",
     instructions:
@@ -90,11 +90,11 @@ const Case1Task1 = () => {
         title="HELP WESTHAM POLICE TO FIND THE TRUTH"
         questions={questionSet1}
         hints={hintSet1}
-        correctAnswers={[1, 4]}
-        successMessage="Congratulations! You solved the case."
+        correctAnswers={[1, 20]}
+        successMessage="You Proved Bones is Innocent!"
       />
     </div>
   );
 };
 
-export default Case1Task1;
+export default Case1Task3;

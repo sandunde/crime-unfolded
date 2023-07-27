@@ -4,7 +4,7 @@ import TaskHeader from "../../../../components/task-header/TaskHeader";
 import CaseImg from "../../../../img/case-header/case1.png";
 import Question from "../../../../components/questions/Question";
 
-const Case1Task1 = () => {
+const Case1Task2 = () => {
   const questionSet1 = {
     mainQuestion: "Can You Prove Bones Is Innocent?",
     instructions:
@@ -97,4 +97,4 @@ const Case1Task1 = () => {
   );
 };
 
-export default Case1Task1;
+export default Case1Task2;
