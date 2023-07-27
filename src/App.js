@@ -20,6 +20,7 @@ import Case1Task1 from "./screens/cases/case-1/task/Case1Task1";
 import Case1Task2 from "./screens/cases/case-1/task/Case1Task2";
 import Case1Task3 from "./screens/cases/case-1/task/Case1Task3";
 import SplashScreen from "./components/splash-screen/SplashScreen";
+import Help from "./screens/help/HowToPlay";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -45,13 +46,14 @@ function App() {
         <Route path="/Sophia" element={<Case2 />} />
         <Route path="/Rose" element={<Case3 />} />
         <Route path="/Answers" element={<Answers />} />
+        <Route path="/How-To-Play" element={<Help />} />
         <Route path="/Isabella-Task1" element={<Case1Task1 />} />
         <Route path="/Isabella-Task2" element={<Case1Task2 />} />
         <Route path="/Isabella-Task3" element={<Case1Task3 />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
       <ScrollUpButton />
-      <DialogflowChatbot />
+      {/* <DialogflowChatbot /> */}
       <Subscribe />
       <Footer />
     </Router>)
