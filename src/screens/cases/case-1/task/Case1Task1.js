@@ -91,7 +91,9 @@ const Case1Task1 = () => {
         questions={questionSet1}
         hints={hintSet1}
         correctAnswers={[1, 4]}
+        taskNum="1"
         successMessage="Congratulations! You solved the case."
+        envelopeMessage="Great work! You can now open the envelope marked: BONUS ENVELOPE A"
       />
     </div>
   );

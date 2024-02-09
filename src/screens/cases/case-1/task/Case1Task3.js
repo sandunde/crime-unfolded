@@ -91,7 +91,9 @@ const Case1Task3 = () => {
         questions={questionSet1}
         hints={hintSet1}
         correctAnswers={[1, 20]}
+        taskNum="3"
         successMessage="You Proved Bones is Innocent!"
+        envelopeMessage="C"
       />
     </div>
   );

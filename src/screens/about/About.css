@@ -1,0 +1,19 @@
+.about-para {
+    margin    : 15px 150px 5px 150px;
+    text-align: justify;
+    color     : #fff;
+    font-size : 17px;
+}
+
+.home-heading {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .about-para {
+        margin    : 15px 30px 5px 30px;
+        text-align: justify;
+        color     : #fff;
+        font-size : 17px;
+    }
+}

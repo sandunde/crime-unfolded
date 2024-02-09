@@ -9,6 +9,8 @@ const Question = ({
   hints,
   correctAnswers,
   successMessage,
+  envelopeMessage,
+  taskNum,
 }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [correctCount, setCorrectCount] = useState(0);
@@ -25,7 +27,7 @@ const Question = ({
     }
   };
 
-  const isButtonDisabled = selectedAnswers.length !== 2;
+  const isButtonDisabled = selectedAnswers.length !== correctAnswers.length;
 
   const handleSubmit = () => {
     const userCorrectCount = selectedAnswers.filter((id) =>
@@ -35,7 +37,9 @@ const Question = ({
     setCorrectCount(userCorrectCount);
     setSubmitAnswer(true);
 
-    console.log(`You got ${userCorrectCount} correct answers out of 2.`);
+    console.log(
+      `You got ${userCorrectCount} correct answers out of ${correctAnswers.length}.`
+    );
   };
 
   const handleGoBack = () => {
@@ -101,15 +105,15 @@ const Question = ({
             </div>
             {isButtonDisabled && (
               <p style={{ color: "red", textAlign: "center", marginTop: 10 }}>
-                Please select exactly two answers.
+                Please select exactly {correctAnswers.length} answers.
               </p>
             )}
           </>
         ) : (
           <>
-            {correctCount === 2 ? (
+            {correctCount === correctAnswers.length ? (
               <div style={{ textAlign: "center" }}>
-                <h2>You Solved Task #1</h2>
+                <h2>You Solved Task #{taskNum}</h2>
                 <p
                   style={{
                     textAlign: "center",
@@ -121,13 +125,16 @@ const Question = ({
                 </p>
                 <p>
                   Great work! You can now open the envelope marked: BONUS
-                  ENVELOPE A
+                  ENVELOPE {envelopeMessage}
                 </p>
               </div>
             ) : (
               <div style={{ textAlign: "center", marginTop: 10 }}>
                 {!hint && (
-                  <p>You got {correctCount} correct answers out of 2.</p>
+                  <p>
+                    You got {correctCount} correct answers out of{" "}
+                    {correctAnswers.length}.
+                  </p>
                 )}
                 {showHintIndex > 0 && showHintIndex <= hints.length && (
                   <div>

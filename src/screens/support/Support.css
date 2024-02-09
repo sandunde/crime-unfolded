@@ -4,6 +4,9 @@
     justify-content: center;
 }
 
+.answer-link {
+    color: #000;
+}
 
 .support-container {
 
@@ -46,7 +49,7 @@
     justify-content: center;
     align-items    : center;
     width          : 70%;
-    margin-top: 50px;
+    margin-top     : 50px;
 }
 
 .MuiAccordionSummary-root:hover {
