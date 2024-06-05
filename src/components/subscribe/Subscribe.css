@@ -1,11 +1,11 @@
 .subscribe-container {
-    margin: 50px 0 50px 0;
+    margin: 100px 0 50px 0;
 }
 
 .center-text-h1 {
     text-align : center;
     color      : #ffd700;
-    font-size  : 35px;
+    font-size  : 25px;
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -14,7 +14,7 @@
     margin-top   : 15px;
     text-align   : center;
     color        : rgb(169, 169, 169);
-    font-size    : 20px;
+    font-size    : 13px;
     font-weight  : 400;
     text-shadow  : 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 30px;

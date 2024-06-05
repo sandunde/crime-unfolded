@@ -53,7 +53,7 @@ function App() {
         <Route path="*" element={<Error404 />} />
       </Routes>
       <ScrollUpButton />
-      <DialogflowChatbot />
+      {/* <DialogflowChatbot /> */}
       <Subscribe />
       <Footer />
     </Router>)

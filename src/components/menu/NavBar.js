@@ -52,9 +52,10 @@ const NavBar = () => {
           <div className="header__middle__logo">
             <NavLink exact activeclassname="is-active" to="/">
               <img
+                className="nav-logo"
                 src={logo}
                 alt="logo"
-                style={{ width: 100, marginLeft: 20 }}
+                // style={{ width: 80, marginLeft: 50 }}
               />
             </NavLink>
           </div>

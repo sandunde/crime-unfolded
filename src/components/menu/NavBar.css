@@ -8,10 +8,16 @@
   margin-left  : auto;
 }
 
-img {
+.nav-logo {
+  width      : 90px;
+  margin-left: 100px !important;
+}
+
+
+/* img {
   max-width: 100%;
   height   : auto;
-}
+} */
 
 .sec__one {
   position: relative;
@@ -64,7 +70,7 @@ li {
 }
 
 .menu-item a {
-  font-size      : 20px;
+  font-size      : 15px;
   font-weight    : 600;
   line-height    : 40px;
   position       : relative;
@@ -153,6 +159,11 @@ li {
 @media (max-width: 767px) {
   .header__middle .active {
     color: #b22222 !important;
+  }
+
+  .nav-logo {
+    width      : 20%;
+    margin-left: 40px !important;
   }
 
   .sub__menus {
@@ -244,6 +255,7 @@ li {
     cursor          : pointer;
     position        : relative;
     z-index         : 10037;
+    margin-top      : 6px;
   }
 
   .main-nav .menubar__button svg {
